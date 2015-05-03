@@ -52,6 +52,7 @@ CiDelaunay::triangulate(vector<vec3> pVertices)
 		cXYZVerts.push_back(toXYZ(*v));
 	}
 	
+	cXYZVerts.push_back(XYZ()); cXYZVerts.push_back(XYZ()); cXYZVerts.push_back(XYZ());
 	cTriangles.resize(cXYZVerts.size() * 3);
 	qsort(cXYZVerts.data(), cXYZVerts.size(), sizeof(XYZ), XYZCompare);
 
